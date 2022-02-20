@@ -1,4 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+body {
+  background-image: url(./images/dimension2.jpg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.menu{
+  display: inline-block;
+  position: relative;
+    width:940px;
+    margin: 0 auto;
+    background-color:azure;
+    border-radius: 10px;
+>>>>>>> 07865c90f23fdb15333ab734de47a4a2816a41b3
 * {
   padding: 0%;
   margin: 0%;
@@ -37,6 +55,7 @@
 .img-card{
   border: solid 5px #56C32A;
   border-radius: 3em;
+<<<<<<< HEAD
 =======
 body {
   background-image: url(./images/dimension2.jpg.jpg);
@@ -53,4 +72,6 @@ body {
     background-color:azure;
     border-radius: 10px;
 >>>>>>> c6eb514ac3294524d15c43929b350481ac017c0e
+=======
+>>>>>>> 07865c90f23fdb15333ab734de47a4a2816a41b3
 }
