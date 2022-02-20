@@ -1,6 +1,8 @@
 // import { example } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
+
+// console.log(example, data);
 function mostrarCards(data) { // innerHTML para mostrar os cards na pagina personagens(html)
   document.getElementById("mostra-cards").innerHTML = data.map((item) => `
   <div class="cards">
