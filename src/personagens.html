@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -31,4 +32,57 @@
 
 </body>
 
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PERSONAGENS - RICK AND MORTY</title>
+  <link rel="stylesheet" href="./style/style_cards.css" />
+</head>
+
+<body>
+  <section class="campo-de-pesquisa">
+    <input class="pesquisa" id="pesquisa" type="search" placeholder="🔎︎ Encontre seu personagem" value="">
+  </section>
+
+  <section class="campo-filtro">
+    <select class="filtro" id="filtro-genero">
+      <option disabled selected value>Gênero</option>
+      <option value="male">Masculino</option>
+      <option value="female">Feminino</option>
+      <option value="unknown">Desconhecido</option>
+    </select>
+    <select class="filtro" id="filtro-status">
+      <option disabled selected value>Status</option>
+      <option value="alive">Vivo</option>
+      <option value="dead">Morto<ption>
+      <option value="unknown">Desconhecido</option>
+    </select>
+    <select class="filtro" id="filtro-especies">
+      <option disabled selected value>Espécie</option>
+      <option value="human">Humanotion</option>
+      <option value="alien">Alien<ption>
+      <option value="humanoid">Humanóide</option>
+      <option value="unknown">Desconhecido</option>
+      <option value="poopybutthole">Poopybutthole</option>
+      <option value="mytholog">Mytholog</option>
+      <option value="animal">Aanimal</option>
+      <option value="vampire">Vampiro</option>
+      <option value="robot">Robô</option>
+      <option value="cronenberg ">Cronenberg</option>
+      <option value="disease">Disease</option>
+      <option value="parasite">Parasita</option>
+      </select>
+      <select class="filtro" id="filtro-ordem">
+        <option disabled selected>Ordem</option>
+        <option value="az">&#8595 A-Z</option>
+        <option value="za">&#8593 Z-A</option>
+      </select>
+      <button id="bnt-limpar" class="bnt-limpar">Limpar</button>
+  </section>
+  <div id="mostra-cards"></div><!-- Os cards são mostrados nessa div-->
+  <script src="main.js" type="module"></script>
+  </body>
 </html>

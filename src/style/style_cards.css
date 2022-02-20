@@ -1,3 +1,4 @@
+
 body {
   background-image: url(./images/dimension2.jpg.jpg);
   background-repeat: no-repeat;
@@ -12,4 +13,42 @@ body {
     margin: 0 auto;
     background-color:azure;
     border-radius: 10px;
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/* CAMPO PESQUISA */
+.pesquisa{
+  width: 15vw;
+  height: 5vh;
+  border-radius: 0.5em;
+}
+/* FILTROS */
+.filtro{
+  width: 10vw;
+  height: 5vh;
+  background-color: #22A2BD;
+  border-radius: 1em;
+}
+/* BOTÃO LIMPAR */
+.bnt-limpar{
+  width: 10vw;
+  height: 5vh;
+  background-color: #22A2BD;
+  border-radius: 1em;
+}
+/* CARDS */
+.cards{
+
+}
+/* FRENTE E VERSO CARDS */
+.frente-card, .verso-card{
+  background-color: #22A2BD;
+}
+/* IMAGEM DOS CARDS */
+.img-card{
+  border: solid 5px #56C32A;
+  border-radius: 3em;
 }
