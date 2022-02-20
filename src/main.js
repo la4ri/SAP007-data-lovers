@@ -1,6 +1,7 @@
 // import { example } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
+<<<<<<< HEAD
 function mostrarCards(data) { // innerHTML para mostrar os cards na pagina personagens(html)
   document.getElementById("mostra-cards").innerHTML = data.map((item) => `
   <div class="cards">
@@ -33,3 +34,6 @@ mostrarCards(data.results);
 //O método join() junta todos os elementos de um array em uma string e retorna esta string.
 //o padrão do array é separado por vírgula, se tirar o join, os dados dos personagens serão separados por virgulas.
 //colocamos as aspas ("") pois não queremos que os dados fiquem separados por virgula
+=======
+// console.log(example, data);
+>>>>>>> c6eb514ac3294524d15c43929b350481ac017c0e
