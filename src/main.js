@@ -1,22 +1,20 @@
 // import { example } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
-
-// console.log(example, data);
 function mostrarCards(data) { // innerHTML para mostrar os cards na pagina personagens(html)
   document.getElementById("mostra-cards").innerHTML = data.map((item) => `
   <div class="cards">
     <div class="frente-card">
       <img class="img-card" src="${item.image}">
-      <p class="nome-personagem">Nome: ${item.name}</p>
+      <p class="nome-personagem"><h3>${item.name}</h3></p>
     </div>
    <div class="verso-card">
-      <p class="info-verso">Gênero: ${item.gender}</p>
-      <p class="info-verso">Status: ${item.status}</p>
-      <p class="info-verso">Espécie: ${item.species}</p>
-      <p class="info-verso">Origem: ${item.origin.name}</p>
-      <p class="info-verso">Localização: ${item.location.name}</p>
-      <p class="info-verso">Episódios:</p>
+      <p class="info-verso"><b>Gênero:</b> ${item.gender}</p>
+      <p class="info-verso"><b>Status:</b> ${item.status}</p>
+      <p class="info-verso"><b>Espécie:</b> ${item.species}</p>
+      <p class="info-verso"><b>Origem:</b> ${item.origin.name}</p>
+      <p class="info-verso"><b>Localização:</b> ${item.location.name}</p>
+      <p class="info-verso"><b>Episódios:</b> </p>
     </div>
   </div>
   `)

@@ -1,11 +1,16 @@
-
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+}
 body {
   background-image: url(./images/dimension2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
-}
 
+}
 .menu{
   display: inline-block;
   position: relative;
@@ -34,16 +39,24 @@ body {
   /* background-color: #22A2BD; */
   border-radius: 1em;
 }
-/* CARDS
-.cards {
-background-color:#22A2BD;
-}*/
-/*
+/* CARDS */
+.cards{
+  font-family: Verdana, Tahoma, sans-serif;
+  color: #ffffff;
+}
+/* FRENTE E VERSO CARDS */
 .frente-card, .verso-card{
-  /* background-color: #22A2BD;
-} */
+  width: 16vw;
+  height: 45vh;
+  padding-top: 2%;
+  background-color: #22A2BD;
+  border-radius: 1em;
+  text-align: center;
+}
 /* IMAGEM DOS CARDS */
 .img-card{
+  width: 13vw;
   border: solid 5px #56C32A;
-  border-radius: 3em;
+  border-radius: 2em;
+  text-align: center;
 }

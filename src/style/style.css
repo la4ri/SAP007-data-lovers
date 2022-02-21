@@ -1,11 +1,9 @@
+
  body {
   background: url(./images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
  }
-
-
 .portal {
     width: 27%;
     left: 37%;
@@ -15,7 +13,6 @@
     mix-blend-mode: normal;
     position: fixed;
 }
-
 .botao-portal {
   position: fixed;
     left: 47%;
