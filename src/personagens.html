@@ -25,12 +25,13 @@
   </nav>
 
   <section class="menu-busca">
-    <input class="pesquisa campo-de-pesquisa" id="pesquisa" type="search" placeholder="🔎︎ Encontre seu personagem"
-      value="">
+
+    <span class="esquerda">
     <select class="filtro campo-filtro" id="filtro-genero">
       <option disabled selected value>Gênero</option>
       <option value="male">Masculino</option>
       <option value="female">Feminino</option>
+      <option value="genderless">Sem gênero</option>
       <option value="unknown">Desconhecido</option>
     </select>
     <select class="filtro campo-filtro" id="filtro-status">
@@ -59,7 +60,13 @@
       <option value="az">&#8595 A-Z</option>
       <option value="za">&#8593 Z-A</option>
     </select>
-    <button id="bnt-limpar" class="bnt-limpar campo-filtro">Limpar</button>
+  </span>
+    <span class="menu-busca1">
+    <input class="pesquisa campo-de-pesquisa" id="pesquisa" type="search" placeholder="🔎︎ Encontre seu personagem"
+      value="">
+    <button type="reset" id="bnt-limpar" class="bnt-limpar campo-filtro">Limpar</button>
+  </span>
+
   </section>
 
   <div id="mostra-cards"></div><!-- Os cards são mostrados nessa div-->

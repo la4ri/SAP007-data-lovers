@@ -7,10 +7,10 @@ body {
 
 .menu {
   position: relative;
-  width: 100%;;
+  width: 100%;
   margin: 0 auto;
   border-radius: 10px;
-  background-image: url(../style/images/galaxy.jpg);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .navegar {
   padding: 10% 3% 10% 10%;

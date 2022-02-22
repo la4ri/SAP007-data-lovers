@@ -12,20 +12,31 @@ body {
   margin-right: auto;
 }
 
-
 .menu {
   position: relative;
-  width: 100%;;
+  width: 100%;
   margin: 0 auto;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .menu-busca {
-display: flex;
-justify-content: center;
+  display: flex;
+background-color: rgba(0, 0, 0, 0.5);
+border-radius: 10px;
+padding: 1.5%;
 }
 
+.esquerda {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menu-busca1 {
+  display: flex;
+justify-content: flex-end;
+}
 
 .navegar {
   padding: 10% 3% 10% 10%;
@@ -39,24 +50,22 @@ justify-content: center;
   color: rgb(155, 213, 233);
 }
 
-/* CAMPO PESQUISA */
 .pesquisa {
-  width: 15%;
+  width: 200px;
   height: 5vh;
   border-radius: 0.5em;
-  display: inline-block;
+  display: inline-flex;
 }
 
-/* FILTROS */
 .filtro {
   width: 10%;
   height: 5vh;
   background-color: #22A2BD;
   border-radius: 1em;
   display: inline-block;
+  font-weight: bold;
 }
 
-/* BOTÃO LIMPAR */
 .bnt-limpar {
   width: 10vw;
   height: 5vh;

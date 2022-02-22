@@ -3,12 +3,12 @@ export const filtroEspecie = (listaPersonagens, especie) => {
   return resultadoEspecie;
 };
 
-export const filtrarGenero = (mostrarCards, gender) => {
-  let genero = mostrarCards.filter((item) => {
-    return item.gender === gender;
-  });
-  return genero;
+export const filtroGenero = (listaPersonagens, gender) => {
+  const resultadoGenero = listaPersonagens.filter((personagem) => personagem.gender.toLowerCase() === gender.toLowerCase());
+    return resultadoGenero;
 };
-export const anotherExample = () => {
-  return 'OMG';
+export const filtroStatus = (listaPersonagens, status) => {
+  const resultadoStatus = listaPersonagens.filter((personagem) => personagem.status.toLowerCase() === status.toLowerCase());
+  return resultadoStatus;
 };
+
