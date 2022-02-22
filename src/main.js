@@ -1,4 +1,4 @@
-// import data from './data.js';
+import {filtroEspecie} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 function mostrarCards(data) { // innerHTML para mostrar os cards na pagina personagens(html)
@@ -34,3 +34,12 @@ mostrarCards(data.results);
 //o padrão do array é separado por vírgula, se tirar o join, os dados dos personagens serão separados por virgulas.
 //colocamos as aspas ("") pois não queremos que os dados fiquem separados por virgula
 
+function filtrarEspecie(){
+  const valorSelecionadoEspecie =  filtroSelecionadoEspecie.value;
+  const selecionadoEspecie = filtroEspecie(listaPersonagens,valorSelecionadoEspecie);
+  mostrarCards(selecionadoEspecie);
+ }
+ filtroSelecionadoEspecie.addEventListener("change",filtrarEspecie);
+
+ const listaPersonagens = data.results;
+ const filtroSelecionadoEspecie = document.getElementById("filtro-especies");
