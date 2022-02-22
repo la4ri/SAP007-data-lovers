@@ -33,3 +33,4 @@ mostrarCards(data.results);
 //O método join() junta todos os elementos de um array em uma string e retorna esta string.
 //o padrão do array é separado por vírgula, se tirar o join, os dados dos personagens serão separados por virgulas.
 //colocamos as aspas ("") pois não queremos que os dados fiquem separados por virgula
+
