@@ -1,4 +1,4 @@
-// import { example } from './data.js';
+// import data from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 function mostrarCards(data) { // innerHTML para mostrar os cards na pagina personagens(html)

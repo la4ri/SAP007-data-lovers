@@ -1,9 +1,9 @@
-// estas funciones son de ejemplo
-
-// export const example = () => {
-//   return 'example';
-// };
-
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
+export const filtrarGenero = (mostrarCards, gender) => {
+  let genero = mostrarCards.filter((item) => {
+    return item.gender === gender;
+  });
+  return genero;
+};
+export const anotherExample = () => {
+  return 'OMG';
+};
