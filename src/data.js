@@ -3,15 +3,27 @@ export const filtroEspecie = (listaPersonagens, especie) => {
   return resultadoEspecie;
 };
 
-export const filtroGenero = (listaPersonagens, gender) => {
-  const resultadoGenero = listaPersonagens.filter((personagem) => personagem.gender.toLowerCase() === gender.toLowerCase());
-    return resultadoGenero;
+export const filtroGenero = (listaPersonagens, genero) => {
+  const resultadoGenero = listaPersonagens.filter((personagem) => personagem.gender.toLowerCase() === genero.towerCase());
+  return resultadoGenero;
 };
+
 export const filtroStatus = (listaPersonagens, status) => {
   const resultadoStatus = listaPersonagens.filter((personagem) => personagem.status.toLowerCase() === status.toLowerCase());
   return resultadoStatus;
 };
 
+export const filtroOrdem = (listaPersonagens, ordem) => {
+  if(ordem ==="az"){
+    return listaPersonagens.sort((a, b) => a.name > b.name ? 1 : -1)
+  }else{
+    return listaPersonagens.sort((a, b) => a.name > b.name ? -1 : 1)
+  }
+};
 
-
-
+// toLowerCase() retorna o valor da string que foi chamada convertido para minúsculo
+// Ex: A especie, gernero e status a primeira letra é maiuscula
+// O método sort() ordena os elementos do próprio array e retorna o array.
+// operador ternário - funciona com o mesmo conceito do if e else
+// A sintaxe é: {condição} ? {expressão se verdadeiro} : {expressão se falso} s
+// condição ? a : b
