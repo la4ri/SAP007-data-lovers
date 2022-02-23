@@ -60,3 +60,16 @@ function filtrarStatus(){
   mostrarCards(selecionadoStatus);
 }
 filtroSelecionadoStatus.addEventListener('change', filtrarStatus);
+
+// const botaoReset = document.getElementById('bnt-limpar')
+
+// function botaolimpar (e){
+//   e.preventDefault();
+//   mostrarCards(data.results);
+//     filtroEspecie.options[(filtroEspecie.selectedIndex = 0)];
+//     filtroGenero.options[(filtroGenero.selectedIndex = 0)];
+//     filtroStatus.options[(filtroStatus.selectedIndex = 0)];
+//   }
+//   botaoReset.addEventListener("click", botaolimpar);
+
+// }

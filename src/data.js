@@ -12,3 +12,6 @@ export const filtroStatus = (listaPersonagens, status) => {
   return resultadoStatus;
 };
 
+
+
+
