@@ -1,8 +1,8 @@
 body {
-  background-image: url(./images/dimension_Gazorpazorp.jpg);
+  background-image: url(../style/images/back.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-attachment: fixed;
 }
 
 .menu {

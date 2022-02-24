@@ -16,7 +16,7 @@ function mostrarCards(data) { // innerHTML para mostrar os cards na pagina perso
       <img class="img-card" src="${item.image}">
       <p class="nome-personagem"><h3>${item.name}</h3></p>
     </div>
-   <div class="verso-card">
+   <div class="verso-card hidden">
       <p class="info-verso"><b>Gênero:</b> ${item.gender}</p>
       <p class="info-verso"><b>Status:</b> ${item.status}</p>
       <p class="info-verso"><b>Espécie:</b> ${item.species}</p>
@@ -66,7 +66,7 @@ botaoLimpar.addEventListener("click", limparFiltros);
 
 function filtrarPesquisa() {
   const valorSelecionadoPesquisa = filtroBusca.value;
-  const selecionarPesquisa = filtroPesquisa(data.results, valorSelecionadoPesquisa);
+  const selecionarPesquisa = filtroPesquisa(listaPersonagens, valorSelecionadoPesquisa);
   mostrarCards(selecionarPesquisa);
 }
 filtroBusca.addEventListener("keyup", filtrarPesquisa);

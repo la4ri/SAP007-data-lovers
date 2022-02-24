@@ -1,7 +1,7 @@
 body {
-  background-image: url(../style/images/dimension2.jpg);
+  background-image: url(../style/images/background-personagens.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
 
 }
@@ -97,4 +97,8 @@ justify-content: flex-end;
   border: solid 5px #56C32A;
   border-radius: 2em;
   text-align: center;
+}
+
+.hidden {
+  display: none;
 }
