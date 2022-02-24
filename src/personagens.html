@@ -13,56 +13,62 @@
   <header>
     <nav class="menu">
       <ul>
-        <a href="./index.html">Ínicio</a>
-        <a href="./personagens.html">Personagens</a>
-        <a href="./analises.html">Análises</a>
-        <a href="./curiosidades.html">Curiosidades</a>
-        <a href="./cortes.html">Cortes</a>
+        <a class="navegar" href="./index.html">Ínicio</a>
+        <a class="navegar" href="./personagens.html">Personagens</a>
+        <a class="navegar" href="./curiosidades.html">Curiosidades</a>
+        <a class="navegar" href="./cortes.html">Cortes</a>
       </ul>
     </nav>
   </header>
   <nav>
-    <img src="./style/images/logo.jpg.png">
+    <img class="imagem-rick-and-morty" src="./style/images/logo.jpg">
   </nav>
-  <section class="campo-de-pesquisa">
-    <input class="pesquisa" id="pesquisa" type="search" placeholder="🔎︎ Encontre seu personagem" value="">
-  </section>
 
-  <section class="campo-filtro">
-    <select class="filtro" id="filtro-genero">
+  <section class="menu-busca">
+
+    <span class="esquerda">
+    <select class="filtro campo-filtro" id="filtro-genero">
       <option disabled selected value>Gênero</option>
       <option value="male">Masculino</option>
       <option value="female">Feminino</option>
+      <option value="genderless">Sem gênero</option>
       <option value="unknown">Desconhecido</option>
     </select>
-    <select class="filtro" id="filtro-status">
+    <select class="filtro campo-filtro" id="filtro-status">
       <option disabled selected value>Status</option>
       <option value="alive">Vivo</option>
-      <option value="dead">Morto<ption>
+      <option value="dead">Morto</option>
       <option value="unknown">Desconhecido</option>
     </select>
-    <select class="filtro" id="filtro-especies">
+    <select class="filtro campo-filtro" id="filtro-especies">
       <option disabled selected value>Espécie</option>
-      <option value="human">Humanotion</option>
-      <option value="alien">Alien<ption>
+      <option value="human">Humano</option>
+      <option value="alien">Alien</option>
       <option value="humanoid">Humanóide</option>
       <option value="unknown">Desconhecido</option>
       <option value="poopybutthole">Poopybutthole</option>
       <option value="mytholog">Mytholog</option>
-      <option value="animal">Aanimal</option>
+      <option value="animal">Animal</option>
       <option value="vampire">Vampiro</option>
       <option value="robot">Robô</option>
       <option value="cronenberg ">Cronenberg</option>
       <option value="disease">Disease</option>
       <option value="parasite">Parasita</option>
     </select>
-    <select class="filtro" id="filtro-ordem">
+    <select class="filtro campo-filtro" id="filtro-ordem">
       <option disabled selected>Ordem</option>
       <option value="az">&#8595 A-Z</option>
       <option value="za">&#8593 Z-A</option>
     </select>
-    <button id="bnt-limpar" class="bnt-limpar">Limpar</button>
+  </span>
+    <span class="menu-busca1">
+    <input class="pesquisa campo-de-pesquisa" id="pesquisa" type="search" placeholder="🔎︎ Encontre seu personagem"
+      value="">
+    <button type="reset" id="bnt-limpar" class="bnt-limpar campo-filtro">Limpar</button>
+  </span>
+
   </section>
+
   <div id="mostra-cards"></div><!-- Os cards são mostrados nessa div-->
   <script src="main.js" type="module"></script>
 </body>

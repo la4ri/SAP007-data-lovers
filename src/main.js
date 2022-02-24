@@ -1,5 +1,13 @@
-// import { example } from './data.js';
+import { filtroEspecie, filtroGenero, filtroStatus, filtroOrdem, filtroPesquisa } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
+
+const listaPersonagens = data.results;
+const filtroSelecionadoEspecie = document.getElementById("filtro-especies");
+const filtroSelecionadoGenero = document.getElementById("filtro-genero");
+const filtroSelecionadoStatus = document.getElementById("filtro-status");
+const filtroSelecionadoOrdem = document.getElementById("filtro-ordem");
+const filtroBusca = document.getElementById("pesquisa");
+const botaoLimpar = document.getElementById("bnt-limpar");
 
 function mostrarCards(data) { // innerHTML para mostrar os cards na pagina personagens(html)
   document.getElementById("mostra-cards").innerHTML = data.map((item) => `
@@ -8,7 +16,7 @@ function mostrarCards(data) { // innerHTML para mostrar os cards na pagina perso
       <img class="img-card" src="${item.image}">
       <p class="nome-personagem"><h3>${item.name}</h3></p>
     </div>
-   <div class="verso-card">
+   <div class="verso-card hidden">
       <p class="info-verso"><b>Gênero:</b> ${item.gender}</p>
       <p class="info-verso"><b>Status:</b> ${item.status}</p>
       <p class="info-verso"><b>Espécie:</b> ${item.species}</p>
@@ -18,13 +26,61 @@ function mostrarCards(data) { // innerHTML para mostrar os cards na pagina perso
     </div>
   </div>
   `)
-   .join("");
+    .join("");
 
 }
-mostrarCards(data.results);
-//console.log(data);
+mostrarCards(listaPersonagens);
 
- //O método map() executa uma função em todos os itens de um array e retorna um novo array após a manipulação,
+function filtrarEspecie() {
+  const valorSelecionadoEspecie = filtroSelecionadoEspecie.value;
+  const selecionadoEspecie = filtroEspecie(listaPersonagens, valorSelecionadoEspecie);
+  mostrarCards(selecionadoEspecie);
+}
+filtroSelecionadoEspecie.addEventListener('change', filtrarEspecie);
+
+function filtrarGenero() {
+  const valorSelecionadoGenero = filtroSelecionadoGenero.value;
+  const selecionadoGenero = filtroGenero(listaPersonagens, valorSelecionadoGenero);
+  mostrarCards(selecionadoGenero);
+}
+filtroSelecionadoGenero.addEventListener('change', filtrarGenero);
+
+function filtrarStatus() {
+  const valorSelecionadoStatus = filtroSelecionadoStatus.value;
+  const selecionadoStatus = filtroStatus(listaPersonagens, valorSelecionadoStatus);
+  mostrarCards(selecionadoStatus);
+}
+filtroSelecionadoStatus.addEventListener('change', filtrarStatus);
+
+function filtrarOrder() {
+  const valorSelecionadoOrdem = filtroSelecionadoOrdem.value;
+  const selecionadoOrdem = filtroOrdem(listaPersonagens, valorSelecionadoOrdem);
+  mostrarCards(selecionadoOrdem);
+}
+filtroSelecionadoOrdem.addEventListener('change', filtrarOrder);
+
+function limparFiltros() {
+  window.location.reload(); //recarrega a página
+}
+botaoLimpar.addEventListener("click", limparFiltros);
+
+function filtrarPesquisa() {
+  const valorSelecionadoPesquisa = filtroBusca.value;
+  const selecionarPesquisa = filtroPesquisa(listaPersonagens, valorSelecionadoPesquisa);
+  mostrarCards(selecionarPesquisa);
+}
+filtroBusca.addEventListener("keyup", filtrarPesquisa);
+
+
+
+
+
+
+
+
+
+
+//O método map() executa uma função em todos os itens de um array e retorna um novo array após a manipulação,
 // ou seja, não sobrescreve o array original.
 // " => " é chamado de arrow function, que é uma função/callback que possui uma sintaxe + curta, comparada com uma função.
 // o "item" foi um parametro criado para puxar os dados do array (array com as informações dos personagens, nome,img etc)

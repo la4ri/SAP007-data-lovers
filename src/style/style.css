@@ -1,9 +1,4 @@
-* {
-  padding: 0%;
-  margin: 0%;
-  box-sizing: border-box;
-  text-decoration: none;
-}
+
  body {
   background: url(./images/background.jpg);
   background-repeat: no-repeat;
@@ -14,7 +9,6 @@
     left: 37%;
     right: 35%;
     top: 37%;
-    bottom: 10.74%;
     mix-blend-mode: normal;
     position: fixed;
 }
@@ -25,8 +19,7 @@
     background: transparent;
     border-radius: 10px;
   font-family: monospace;
-
-
+  text-align: center;
 }
 
 .botao-portal:hover{
