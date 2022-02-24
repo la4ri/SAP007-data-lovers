@@ -4,7 +4,7 @@ export const filtroEspecie = (listaPersonagens, especie) => {
 };
 
 export const filtroGenero = (listaPersonagens, genero) => {
-  const resultadoGenero = listaPersonagens.filter((personagem) => personagem.gender.toLowerCase() === genero.towerCase());
+  const resultadoGenero = listaPersonagens.filter((personagem) => personagem.gender.toLowerCase() === genero.toLowerCase());
   return resultadoGenero;
 };
 
@@ -14,12 +14,17 @@ export const filtroStatus = (listaPersonagens, status) => {
 };
 
 export const filtroOrdem = (listaPersonagens, ordem) => {
-  if(ordem ==="az"){
+  if (ordem === "az") {
     return listaPersonagens.sort((a, b) => a.name > b.name ? 1 : -1)
-  }else{
+  } else {
     return listaPersonagens.sort((a, b) => a.name > b.name ? -1 : 1)
   }
 };
+
+export const filtroPesquisa = (listaPersonagens, acharValor) => {
+  let resultadoPesquisa = listaPersonagens.filter(personagem => personagem.name.toLowerCase().includes(acharValor.toLowerCase()));
+  return resultadoPesquisa;
+}
 
 // toLowerCase() retorna o valor da string que foi chamada convertido para minúsculo
 // Ex: A especie, gernero e status a primeira letra é maiuscula

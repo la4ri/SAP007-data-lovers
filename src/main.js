@@ -1,4 +1,4 @@
-import { filtroEspecie, filtroGenero, filtroStatus, filtroOrdem } from './data.js';
+import { filtroEspecie, filtroGenero, filtroStatus, filtroOrdem, filtroPesquisa } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 const listaPersonagens = data.results;
@@ -6,7 +6,8 @@ const filtroSelecionadoEspecie = document.getElementById("filtro-especies");
 const filtroSelecionadoGenero = document.getElementById("filtro-genero");
 const filtroSelecionadoStatus = document.getElementById("filtro-status");
 const filtroSelecionadoOrdem = document.getElementById("filtro-ordem");
-const botaoLimpar= document.getElementById("bnt-limpar");
+const filtroBusca = document.getElementById("pesquisa");
+const botaoLimpar = document.getElementById("bnt-limpar");
 
 function mostrarCards(data) { // innerHTML para mostrar os cards na pagina personagens(html)
   document.getElementById("mostra-cards").innerHTML = data.map((item) => `
@@ -37,14 +38,14 @@ function filtrarEspecie() {
 }
 filtroSelecionadoEspecie.addEventListener('change', filtrarEspecie);
 
-function filtrarGenero(){
+function filtrarGenero() {
   const valorSelecionadoGenero = filtroSelecionadoGenero.value;
   const selecionadoGenero = filtroGenero(listaPersonagens, valorSelecionadoGenero);
   mostrarCards(selecionadoGenero);
 }
 filtroSelecionadoGenero.addEventListener('change', filtrarGenero);
 
-function filtrarStatus(){
+function filtrarStatus() {
   const valorSelecionadoStatus = filtroSelecionadoStatus.value;
   const selecionadoStatus = filtroStatus(listaPersonagens, valorSelecionadoStatus);
   mostrarCards(selecionadoStatus);
@@ -53,15 +54,31 @@ filtroSelecionadoStatus.addEventListener('change', filtrarStatus);
 
 function filtrarOrder() {
   const valorSelecionadoOrdem = filtroSelecionadoOrdem.value;
-  const selecionadoOrdem = filtroOrdem(listaPersonagens,valorSelecionadoOrdem);
+  const selecionadoOrdem = filtroOrdem(listaPersonagens, valorSelecionadoOrdem);
   mostrarCards(selecionadoOrdem);
 }
-filtroSelecionadoOrdem.addEventListener('change',filtrarOrder);
+filtroSelecionadoOrdem.addEventListener('change', filtrarOrder);
 
-function limparFiltros(){
+function limparFiltros() {
   window.location.reload(); //recarrega a página
-  }
-  botaoLimpar.addEventListener("click",limparFiltros);
+}
+botaoLimpar.addEventListener("click", limparFiltros);
+
+function filtrarPesquisa() {
+  const valorSelecionadoPesquisa = filtroBusca.value;
+  const selecionarPesquisa = filtroPesquisa(data.results, valorSelecionadoPesquisa);
+  mostrarCards(selecionarPesquisa);
+}
+filtroBusca.addEventListener("keyup", filtrarPesquisa);
+
+
+
+
+
+
+
+
+
 
 //O método map() executa uma função em todos os itens de um array e retorna um novo array após a manipulação,
 // ou seja, não sobrescreve o array original.
