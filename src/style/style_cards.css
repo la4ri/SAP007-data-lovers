@@ -24,7 +24,7 @@ body {
   display: flex;
 background-color: rgba(0, 0, 0, 0.5);
 border-radius: 10px;
-padding: 1.5%;
+padding: 0.5%;
 }
 
 .esquerda {
@@ -51,26 +51,35 @@ justify-content: flex-end;
 }
 
 .pesquisa {
-  width: 200px;
-  height: 5vh;
+  width: 18vw;
+  height: 6vh;
+  margin: 1%;
   border-radius: 0.5em;
   display: inline-flex;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 .filtro {
-  width: 10%;
-  height: 5vh;
+  width: 10vw;
+  height: 6vh;
+  margin: 1%;
   background-color: #22A2BD;
   border-radius: 1em;
   display: inline-block;
   font-weight: bold;
+  border:#9BD5E9 solid 3px;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 .bnt-limpar {
   width: 10vw;
-  height: 5vh;
+  height: 6vh;
+  margin: 1%;
   background-color: #22A2BD;
   border-radius: 1em;
+  font-weight: bold;
+  border:#9BD5E9 solid 3px;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 /* CARDS */
