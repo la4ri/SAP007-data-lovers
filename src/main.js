@@ -13,7 +13,7 @@ function mostrarCards(data) { // innerHTML para mostrar os cards na pagina perso
   document.getElementById("mostra-cards").innerHTML = data.map((item) => `
   <div class="cards">
     <div class="frente-card">
-      <img class="img-card" src="${item.image}">
+      <img class="img-card" src="${item.image}"  alt="cards">
       <p class="nome-personagem"><h3>${item.name}</h3></p>
     </div>
    <div class="verso-card hidden">
