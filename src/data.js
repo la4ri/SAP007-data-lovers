@@ -22,7 +22,7 @@ export const filtroOrdem = (listaPersonagens, ordem) => {
 };
 
 export const filtroPesquisa = (listaPersonagens, acharValor) => {
-  let resultadoPesquisa = listaPersonagens.filter(personagem => personagem.name.toLowerCase().includes(acharValor.toLowerCase()));
+  const resultadoPesquisa = listaPersonagens.filter(personagem => personagem.name.toLowerCase().includes(acharValor.toLowerCase()));
   return resultadoPesquisa;
 }
 
