@@ -24,7 +24,12 @@ export const filtroOrdem = (listaPersonagens, ordem) => {
 export const filtroPesquisa = (listaPersonagens, acharValor) => {
   const resultadoPesquisa = listaPersonagens.filter(personagem => personagem.name.toLowerCase().includes(acharValor.toLowerCase()));
   return resultadoPesquisa;
-}
+};
+
+export const calculaFiltros = (listaPersonagens,filtroSelecionado)=>{
+  const resultadoCalculo = parseFloat((filtroSelecionado.length * 100) / listaPersonagens.length).toFixed(2);
+  return resultadoCalculo;
+};
 
 // toLowerCase() retorna o valor da string que foi chamada convertido para minúsculo
 // Ex: A especie, gernero e status a primeira letra é maiuscula
