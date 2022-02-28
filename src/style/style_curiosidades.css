@@ -11,7 +11,6 @@ body {
   background-attachment: fixed;
 }
 
-
 .menu {
   position: relative;
   width: 98%;
@@ -58,9 +57,9 @@ body {
 }
 
 .texto-curiosidades, .fontes p, a{
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
   font-family: Verdana, Tahoma, sans-serif;
   color: #ffffff;
   text-align: justify;
@@ -72,7 +71,7 @@ body {
 
 .imagens-curiosidades{
   width: 100%;
-  height: 9%;
+  height: 8.5%;
   padding-bottom: 2%;
 }
 
