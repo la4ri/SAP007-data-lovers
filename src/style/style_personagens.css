@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../style/images/background-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.menu {
+  position: relative;
+  width: 98%;
+  margin:auto;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.menu ul{
+  text-align: center;
+}
+.navegar {
+  padding:0 5%;
+  text-align: center;
+  font-size: 30px;
+  color:#8BFF5D;
+  font-family: monospace;
+}
+
+.navegar:hover {
+  color: #9BD5E9;
+}
+
+.imagem-rick-and-morty {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-busca {
+  width: 98%;
+  margin: auto;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 0.5%;
+}
+
+.menu-esquerda {
+  width: 70%;
+  margin-left: 4%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menu-pesquisa {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 4%;
+}
+
+.pesquisa {
+  width: 18vw;
+  height: 6vh;
+  margin: 1%;
+  padding: 1%;
+  border-radius: 0.5em;
+  display: inline-flex;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+.filtro, .bnt-limpar{
+  width: 10vw;
+  height: 6vh;
+  margin: 0.5%;
+  background-color: #22A2BD;
+  border-radius: 1em;
+  display: inline-block;
+  font-weight: bold;
+  border:#9BD5E9 solid 3px;
+  font-family: Verdana, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.calculo-filtro{
+  width: 60%;
+  display: none;
+  background-color: #22A2BD;
+  border-radius: 0.5em ;
+  border:#9BD5E9 solid 3px;
+  font-family: Verdana, Tahoma, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.2%;
+  margin-top: 0.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CARDS */
+.cards {
+  font-family: Verdana, Tahoma, sans-serif;
+<<<<<<< HEAD:src/style/style_cards.css
+  display: inline-block;
+  padding: 2% 1% 2% 2%;
+
+
+=======
+  display: inline-flex;
+  padding: 1%;
+>>>>>>> 26251328e00bb5f7d12a95569e362684495ae5c1:src/style/style_personagens.css
+}
+
+/* FRENTE E VERSO CARDS */
+.frente-card, .verso-card {
+  width: 16vw;
+  height: 45vh;
+  padding-top: 2%;
+  background-color: #22A2BD;
+  border-radius: 1em;
+  text-align: center;
+  border:#9BD5E9 solid 3px;
+}
+
+.frente-card h3{
+  width: 90%;
+  height: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+  border:#9BD5E9 solid 2px;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* IMAGEM DOS CARDS */
+.img-card {
+  width: 13vw;
+  border: solid 5px #56C32A;
+  border-radius: 2em;
+  margin-top: 2%;
+  text-align: center;
+}
+
+/* RODAPÉ */
+.rodape{
+  width: 98%;
+  margin:auto;
+  padding: 0.5%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.rodape p{
+  font-family: Verdana, Tahoma, sans-serif;
+  text-align: center;
+  color:#8BFF5D;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.rodape a:visited{
+  color:#8BFF5D;
+}

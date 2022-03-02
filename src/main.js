@@ -1,4 +1,4 @@
-import { filtroEspecie, filtroGenero, filtroStatus, filtroOrdem, filtroPesquisa } from './data.js';
+import { filtroEspecie, filtroGenero, filtroStatus, filtroOrdem, filtroPesquisa, calculaFiltros } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 const listaPersonagens = data.results;
@@ -6,6 +6,7 @@ const filtroSelecionadoEspecie = document.getElementById("filtro-especies");
 const filtroSelecionadoGenero = document.getElementById("filtro-genero");
 const filtroSelecionadoStatus = document.getElementById("filtro-status");
 const filtroSelecionadoOrdem = document.getElementById("filtro-ordem");
+const calculoFiltros = document.getElementById("calculo-filtro");
 const filtroBusca = document.getElementById("pesquisa");
 const botaoLimpar = document.getElementById("bnt-limpar");
 
@@ -13,7 +14,7 @@ function mostrarCards(data) { // innerHTML para mostrar os cards na pagina perso
   document.getElementById("mostra-cards").innerHTML = data.map((item) => `
   <div class="cards">
     <div class="frente-card">
-      <img class="img-card" src="${item.image}">
+      <img class="img-card" src="${item.image}"  alt="cards">
       <p class="nome-personagem"><h3>${item.name}</h3></p>
     </div>
    <div class="verso-card hidden">
@@ -22,7 +23,7 @@ function mostrarCards(data) { // innerHTML para mostrar os cards na pagina perso
       <p class="info-verso"><b>Espécie:</b> ${item.species}</p>
       <p class="info-verso"><b>Origem:</b> ${item.origin.name}</p>
       <p class="info-verso"><b>Localização:</b> ${item.location.name}</p>
-      <p class="info-verso"><b>Episódios:</b> </p>
+      <p class="info-verso"><b>Aparecem em: </b> ${item.episode.length} episódios</p>
     </div>
   </div>
   `)
@@ -31,10 +32,24 @@ function mostrarCards(data) { // innerHTML para mostrar os cards na pagina perso
 }
 mostrarCards(listaPersonagens);
 
+function calcularFiltros(listaPersonagens, filtroSelecionado) {
+  calculoFiltros.innerHTML = "",
+  calculoFiltros.style.display = "block";
+  const calculoResultado = calculaFiltros(listaPersonagens, filtroSelecionado);
+  calculoFiltros.innerHTML = `Existem ${filtroSelecionado.length} personagens deste filtro, e
+  representam ${calculoResultado}% do total dos personagens`
+}
+
+function limparFiltros() {
+  window.location.reload(); //recarrega a página
+}
+botaoLimpar.addEventListener("click", limparFiltros);
+
 function filtrarEspecie() {
   const valorSelecionadoEspecie = filtroSelecionadoEspecie.value;
   const selecionadoEspecie = filtroEspecie(listaPersonagens, valorSelecionadoEspecie);
   mostrarCards(selecionadoEspecie);
+  calcularFiltros(listaPersonagens,selecionadoEspecie);
 }
 filtroSelecionadoEspecie.addEventListener('change', filtrarEspecie);
 
@@ -42,6 +57,7 @@ function filtrarGenero() {
   const valorSelecionadoGenero = filtroSelecionadoGenero.value;
   const selecionadoGenero = filtroGenero(listaPersonagens, valorSelecionadoGenero);
   mostrarCards(selecionadoGenero);
+  calcularFiltros(listaPersonagens,selecionadoGenero);
 }
 filtroSelecionadoGenero.addEventListener('change', filtrarGenero);
 
@@ -49,6 +65,7 @@ function filtrarStatus() {
   const valorSelecionadoStatus = filtroSelecionadoStatus.value;
   const selecionadoStatus = filtroStatus(listaPersonagens, valorSelecionadoStatus);
   mostrarCards(selecionadoStatus);
+  calcularFiltros(listaPersonagens,selecionadoStatus);
 }
 filtroSelecionadoStatus.addEventListener('change', filtrarStatus);
 
@@ -58,11 +75,6 @@ function filtrarOrder() {
   mostrarCards(selecionadoOrdem);
 }
 filtroSelecionadoOrdem.addEventListener('change', filtrarOrder);
-
-function limparFiltros() {
-  window.location.reload(); //recarrega a página
-}
-botaoLimpar.addEventListener("click", limparFiltros);
 
 function filtrarPesquisa() {
   const valorSelecionadoPesquisa = filtroBusca.value;
