@@ -85,8 +85,9 @@ justify-content: flex-end;
 /* CARDS */
 .cards {
   font-family: Verdana, Tahoma, sans-serif;
-  display: inline-flex;
-  padding: 2% 0.1% 2% 0.1%;
+  display: inline-block;
+  padding: 2% 1% 2% 2%;
+
 
 }
 
