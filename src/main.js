@@ -17,7 +17,7 @@ function mostrarCards(data) { // innerHTML para mostrar os cards na pagina perso
       <img class="img-card" src="${item.image}"  alt="cards">
       <p class="nome-personagem"><h3>${item.name}</h3></p>
     </div>
-   <div id="verso-card" class="verso-card">
+   <div id="verso-card" class="verso-card hidden">
       <p class="info-verso"><b>Gênero:</b> ${item.gender}</p>
       <p class="info-verso"><b>Status:</b> ${item.status}</p>
       <p class="info-verso"><b>Espécie:</b> ${item.species}</p>
