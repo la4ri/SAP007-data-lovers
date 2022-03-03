@@ -13,11 +13,11 @@ const botaoLimpar = document.getElementById("bnt-limpar");
 function mostrarCards(data) { // innerHTML para mostrar os cards na pagina personagens(html)
   document.getElementById("mostra-cards").innerHTML = data.map((item) => `
   <div class="cards">
-    <div class="frente-card">
+    <div id="frente-card" class="frente-card">
       <img class="img-card" src="${item.image}"  alt="cards">
       <p class="nome-personagem"><h3>${item.name}</h3></p>
     </div>
-   <div class="verso-card hidden">
+   <div id="verso-card" class="verso-card">
       <p class="info-verso"><b>Gênero:</b> ${item.gender}</p>
       <p class="info-verso"><b>Status:</b> ${item.status}</p>
       <p class="info-verso"><b>Espécie:</b> ${item.species}</p>
@@ -82,7 +82,6 @@ function filtrarPesquisa() {
   mostrarCards(selecionarPesquisa);
 }
 filtroBusca.addEventListener("keyup", filtrarPesquisa);
-
 
 
 

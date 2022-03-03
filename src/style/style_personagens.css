@@ -102,15 +102,8 @@ body {
 /* CARDS */
 .cards {
   font-family: Verdana, Tahoma, sans-serif;
-<<<<<<< HEAD:src/style/style_cards.css
-  display: inline-block;
-  padding: 2% 1% 2% 2%;
-
-
-=======
   display: inline-flex;
   padding: 1%;
->>>>>>> 26251328e00bb5f7d12a95569e362684495ae5c1:src/style/style_personagens.css
 }
 
 /* FRENTE E VERSO CARDS */
