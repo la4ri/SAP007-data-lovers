@@ -10,27 +10,44 @@ const calculoFiltros = document.getElementById("calculo-filtro");
 const filtroBusca = document.getElementById("pesquisa");
 const botaoLimpar = document.getElementById("bnt-limpar");
 
+function criarCard (personagem) {
+  const divCard = document.createElement('div')
+  divCard.classList.add('cards')
+  divCard.innerHTML =  `
+    <div class="frente-card">
+      <img class="img-card" src="${personagem.image}"  alt="cards">
+      <p class="nome-personagem"><h3>${personagem.name}</h3></p>
+    </div>
+    <div class="verso-card">
+      <p class="info-verso"><b>Gênero:</b> ${personagem.gender}</p>
+      <p class="info-verso"><b>Status:</b> ${personagem.status}</p>
+      <p class="info-verso"><b>Espécie:</b> ${personagem.species}</p>
+      <p class="info-verso"><b>Origem:</b> ${personagem.origin.name}</p>
+      <p class="info-verso"><b>Localização:</b> ${personagem.location.name}</p>
+      <p class="info-verso"><b>Aparecem em: </b> ${personagem.episode.length} episódios</p>
+    </div>
+  `
+  function chameiClick(personagem) {
+    console.log('cliquei', personagem.name)
+  }
+
+  const frenteCard = divCard.querySelector('.frente-card')
+  frenteCard.addEventListener('click', () => chameiClick(personagem))
+  return divCard
+}
+
+
+
 function mostrarCards(data) { // innerHTML para mostrar os cards na pagina personagens(html)
-  document.getElementById("mostra-cards").innerHTML = data.map((item) => `
-  <div class="cards">
-    <div id="frente-card" class="frente-card">
-      <img class="img-card" src="${item.image}"  alt="cards">
-      <p class="nome-personagem"><h3>${item.name}</h3></p>
-    </div>
-   <div id="verso-card" class="verso-card hidden">
-      <p class="info-verso"><b>Gênero:</b> ${item.gender}</p>
-      <p class="info-verso"><b>Status:</b> ${item.status}</p>
-      <p class="info-verso"><b>Espécie:</b> ${item.species}</p>
-      <p class="info-verso"><b>Origem:</b> ${item.origin.name}</p>
-      <p class="info-verso"><b>Localização:</b> ${item.location.name}</p>
-      <p class="info-verso"><b>Aparecem em: </b> ${item.episode.length} episódios</p>
-    </div>
-  </div>
-  `)
-    .join("");
+  data.map(personagem => {
+    const div = criarCard(personagem)
+    document.getElementById("mostra-cards").appendChild(div)
+  })
 
 }
 mostrarCards(listaPersonagens);
+
+
 
 function calcularFiltros(listaPersonagens, filtroSelecionado) {
   calculoFiltros.innerHTML = "",
