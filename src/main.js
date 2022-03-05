@@ -12,7 +12,7 @@ const botaoLimpar = document.getElementById("bnt-limpar");
 
 function criarCard (personagem) {
   const divCard = document.createElement('div')
-  divCard.classList.add('cards')
+  divCard.classList.add('cards', 'mostra-frente')
   divCard.innerHTML =  `
     <div class="frente-card">
       <img class="img-card" src="${personagem.image}"  alt="cards">
@@ -27,21 +27,30 @@ function criarCard (personagem) {
       <p class="info-verso"><b>Aparecem em: </b> ${personagem.episode.length} episódios</p>
     </div>
   `
-  function chameiClick(personagem) {
-    console.log('cliquei', personagem.name)
+  function chameiClick() {
+    if (divCard.classList.contains('mostra-frente')) {
+      //mostrar verso
+      divCard.classList.add('mostra-verso')
+      divCard.classList.remove('mostra-frente')
+    } else {
+      //mostrar frente
+      divCard.classList.add('mostra-frente')
+      divCard.classList.remove('mostra-verso')
+    }
   }
 
-  const frenteCard = divCard.querySelector('.frente-card')
-  frenteCard.addEventListener('click', () => chameiClick(personagem))
+  divCard.addEventListener('click', () => chameiClick(personagem))
   return divCard
 }
 
 
 
 function mostrarCards(data) { // innerHTML para mostrar os cards na pagina personagens(html)
+  const conteiner = document.getElementById("mostra-cards");
+  conteiner.innerHTML = "";
   data.map(personagem => {
     const div = criarCard(personagem)
-    document.getElementById("mostra-cards").appendChild(div)
+    conteiner.appendChild(div)
   })
 
 }

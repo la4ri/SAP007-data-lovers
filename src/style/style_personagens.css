@@ -148,7 +148,11 @@ body {
   border-radius: 8px;
 }
 
-.hidden {
+.cards.mostra-frente .verso-card {
+  display: none;
+}
+
+.cards.mostra-verso .frente-card {
   display: none;
 }
 
