@@ -48,7 +48,7 @@ body {
   margin-right: auto;
   margin-bottom: 4%;
   padding: 2%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
 }
 
@@ -80,7 +80,7 @@ body {
   margin:auto;
   padding: 0.5%;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .rodape p{
