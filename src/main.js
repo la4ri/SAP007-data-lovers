@@ -12,34 +12,27 @@ const botaoLimpar = document.getElementById("bnt-limpar");
 
 function criarCard (personagem) {
   const divCard = document.createElement('div')
-  divCard.classList.add('cards', 'mostra-frente')
+  divCard.classList.add('cards')
   divCard.innerHTML =  `
     <div class="frente-card">
       <img class="img-card" src="${personagem.image}"  alt="cards">
-      <p class="nome-personagem"><h3>${personagem.name}</h3></p>
+      <p class="nome-personagem">${personagem.name}</p>
     </div>
     <div class="verso-card">
-      <p class="info-verso"><b>Gênero:</b> ${personagem.gender}</p>
-      <p class="info-verso"><b>Status:</b> ${personagem.status}</p>
-      <p class="info-verso"><b>Espécie:</b> ${personagem.species}</p>
-      <p class="info-verso"><b>Origem:</b> ${personagem.origin.name}</p>
-      <p class="info-verso"><b>Localização:</b> ${personagem.location.name}</p>
-      <p class="info-verso"><b>Aparecem em: </b> ${personagem.episode.length} episódios</p>
+      <p><b>Gênero:</b> ${personagem.gender}</p>
+      <p><b>Status:</b> ${personagem.status}</p>
+      <p><b>Espécie:</b> ${personagem.species}</p>
+      <p><b>Origem:</b> ${personagem.origin.name}</p>
+      <p><b>Localização:</b> ${personagem.location.name}</p>
+      <p><b>Aparecem em: </b> ${personagem.episode.length} episódios</p>
     </div>
   `
+
   function chameiClick() {
-    if (divCard.classList.contains('mostra-frente')) {
-      //mostrar verso
-      divCard.classList.add('mostra-verso')
-      divCard.classList.remove('mostra-frente')
-    } else {
-      //mostrar frente
-      divCard.classList.add('mostra-frente')
-      divCard.classList.remove('mostra-verso')
-    }
+    divCard.classList.toggle('mostra-verso');
   }
 
-  divCard.addEventListener('click', () => chameiClick(personagem))
+  divCard.addEventListener('click', chameiClick)
   return divCard
 }
 
