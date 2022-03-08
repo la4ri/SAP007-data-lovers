@@ -78,10 +78,6 @@ body {
   background-color: #B8E4F3;
 }
 
-.pesquisa:hover, .pesquisa:focus {
-  background-color: #A5FF82;
-}
-
 .filtro, .bnt-limpar{
   width: 10vw;
   height: 6vh;
@@ -95,13 +91,15 @@ body {
   text-align: center;
 }
 
-.bnt-limpar:hover, .bnt-limpar:focus, .filtro:hover, .filtro:focus{
+.bnt-limpar:hover, .bnt-limpar:focus, .filtro:hover, .filtro:focus {
   background-color: #8BFF5D;
   border:#02883A solid 3px;
+  box-shadow: 0px 0px 10px #8BFF5D, 0px 0px 20px #56C32A, 0px 0px 30px #8BFF5D;
 }
 
-.pesquisa:focus, .bnt-limpar:focus, .filtro:focus{
+.pesquisa:focus, .pesquisa:hover {
   box-shadow: 0px 0px 10px #8BFF5D, 0px 0px 20px #56C32A, 0px 0px 30px #8BFF5D;
+  background-color: #b5f79b;
 }
 
 .frente-card:hover, .verso-card {
