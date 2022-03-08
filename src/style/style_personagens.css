@@ -11,6 +11,11 @@ body {
   background-attachment: fixed;
 }
 
+.mostra-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .menu {
   position: relative;
   width: 98%;
@@ -69,10 +74,11 @@ body {
   border-radius: 0.5em;
   display: inline-flex;
   font-family: Verdana, Tahoma, sans-serif;
+  background-color: #B8E4F3;
 }
 
-.pesquisa:hover {
-  background-color: #8BFF5D;
+.pesquisa:hover, .pesquisa:focus {
+  background-color: #A5FF82;
 }
 
 .filtro, .bnt-limpar{
@@ -88,13 +94,23 @@ body {
   text-align: center;
 }
 
-.bnt-limpar:hover {
-  background-color: #56C32A;
-  border:#8BFF5D solid 3px;
+.bnt-limpar:hover, .bnt-limpar:focus {
+  background-color: #8BFF5D;
+  border:#02883A solid 3px;
 }
-.filtro:hover {
-  background-color: #56C32A;
-  border:#8BFF5D solid 3px;
+.filtro:hover, .filtro:focus {
+  background-color: #8BFF5D;
+  border:#02883A solid 3px;
+}
+
+.pesquisa:focus,
+.bnt-limpar:focus,
+.filtro:focus {
+  box-shadow: 0px 0px 10px #8BFF5D, 0px 0px 20px #56C32A, 0px 0px 30px #8BFF5D;
+}
+
+.frente-card:hover, .verso-card {
+  box-shadow: 0px 0px 10px #02883A, 0px 0px 20px #56C32A, 0px 0px 30px #02883A;
 }
 
 .calculo-filtro{
@@ -115,7 +131,6 @@ body {
 /* CARDS */
 .cards {
   font-family: Verdana, Tahoma, sans-serif;
-  display: inline-flex;
   padding: 1%;
 }
 
@@ -123,17 +138,13 @@ body {
 .frente-card, .verso-card {
   width: 16vw;
   height: 45vh;
-  padding-top: 2%;
+  padding-top: 0.5%;
   background-color: #22A2BD;
   border-radius: 1em;
   text-align: center;
   border:#9BD5E9 solid 3px;
 }
 
-.frente-card:hover{
-  border: #8BFF5D solid 3px;
-  background-color: #56C32A;
-}
 .frente-card .nome-personagem {
   width: 90%;
   height: 22%;
@@ -172,10 +183,6 @@ body {
   border-radius: 2em;
   margin-top: 2%;
   text-align: center;
-}
-
-.img-card:hover {
-  border:#22A2BD solid 5px;
 }
 
 /* RODAPÉ */

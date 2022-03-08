@@ -11,7 +11,7 @@ const filtroBusca = document.getElementById("pesquisa");
 const botaoLimpar = document.getElementById("bnt-limpar");
 
 function criarCard (personagem) {
-  const divCard = document.createElement('div')
+  const divCard = document.createElement('ul')
   divCard.classList.add('cards')
   divCard.innerHTML =  `
     <div class="frente-card">
