@@ -28,11 +28,11 @@ function criarCard (personagem) {
     </div>
   `
 
-  function chameiClick() {
+  function mostrarVerso() {
     divCard.classList.toggle('mostra-verso');
   }
 
-  divCard.addEventListener('click', chameiClick)
+  divCard.addEventListener('click', mostrarVerso)
   return divCard
 }
 
