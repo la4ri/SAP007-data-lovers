@@ -88,5 +88,3 @@ describe('filtroOrdem', () => {
   });
 })
 
-//.toEqual() Simplesmente verifica se duas coisas são iguais (e não necessariamente o mesmo objeto)
-// .toStrictEqual : Use para testar que os objetos têm os mesmos tipos, bem como estrutura.
