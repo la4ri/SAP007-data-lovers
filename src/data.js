@@ -31,10 +31,3 @@ export const calculaFiltros = (listaPersonagens, filtroSelecionado) => {
   const resultadoCalculo = parseFloat((filtroSelecionado.length * 100) / listaPersonagens.length).toFixed(2);
   return resultadoCalculo;
 };
-
-// toLowerCase() retorna o valor da string que foi chamada convertido para minúsculo
-// Ex: A especie, gernero e status a primeira letra é maiuscula
-// O método sort() ordena os elementos do próprio array e retorna o array.
-// operador ternário - funciona com o mesmo conceito do if e else
-// A sintaxe é: {condição} ? {expressão se verdadeiro} : {expressão se falso} s
-// condição ? a : b

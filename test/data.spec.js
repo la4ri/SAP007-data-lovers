@@ -87,4 +87,3 @@ describe('filtroOrdem', () => {
     expect(personagensFiltrados).toEqual(nomesOrdemZA)
   });
 })
-
