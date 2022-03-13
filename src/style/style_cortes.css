@@ -41,6 +41,19 @@ body {
   margin-right: auto;
 }
 
+.cortes {
+  display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4%;
+  padding: 2%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  text-align: justify;
+  color:antiquewhite;
+}
+
 .rodape{
   width: 98%;
   margin:auto;
