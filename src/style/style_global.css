@@ -1,11 +1,21 @@
-body {
-  background-image: url(../style/images/back.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Tahoma, sans-serif;
 }
-<<<<<<< HEAD
 
+/* BOTÃO VOLTAR PARA O TOPO */
+.botao-topo{
+  position: fixed;
+  bottom: 2%;
+  right: 0.5%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* MENU PRINCIPAL */
 .menu {
   position: relative;
   width: 98%;
@@ -30,25 +40,14 @@ body {
   color: #9BD5E9;
 }
 
-.imagem-rick-and-morty {
+/* LOGO RICK AND MORTY*/
+.logo-rick-and-morty {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.cortes {
-  display: block;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 4%;
-  padding: 2%;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
-  text-align: justify;
-  color:antiquewhite;
-}
-
+/* RODAPÉ */
 .rodape{
   width: 98%;
   margin:auto;
@@ -57,14 +56,13 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.rodape p{
-  font-family: Verdana, Tahoma, sans-serif;
+.texto-rodape{
   text-align: center;
   color:#8BFF5D;
   font-size: 1em;
   font-weight: bold;
 }
 
-.rodape a:visited{
+.texto-rodape a:visited{
   color:#8BFF5D;
 }
