@@ -1,6 +1,6 @@
 
 import { describe, it } from 'eslint/lib/rule-tester/rule-tester';
-import { filtroGenero, filtroStatus, filtroOrdem } from '../src/data.js';
+import { filtroGenero, filtroStatus, filtroOrdem, filtroEspecie, filtroPesquisa } from '../src/data.js';
 
 const personagens = [
   {
@@ -86,4 +86,22 @@ describe('filtroOrdem', () => {
     const personagensFiltrados = filtroOrdem(nomesPersonagens, "za")
     expect(personagensFiltrados).toEqual(nomesOrdemZA)
   });
+})
+
+describe('filtroEspecie', () => {
+  it('função do filtro espécie', ()=> {
+    expect(typeof filtroEspecie).toBe('function');
+  });
+  it('retorna os somente os personagens "Alien", quando selecionado "Alien"', ()=> {
+    const resultadoEsperado = [{"name": "Steven Phillips", "status": "Alive","species": "Alien", "gender": "Male"}]
+    const personagensFiltrados = filtroEspecie(personagens, 'Alien')
+    expect(personagensFiltrados).toEqual(resultadoEsperado)
+  })
+})
+
+describe('filtroNomeSelecionado', ()=> {
+  it('função do filtro pesquisa', ()=> {
+    expect(typeof filtroPesquisa).toBe('function');
+  });
+  it('retorna os personagens ')
 })

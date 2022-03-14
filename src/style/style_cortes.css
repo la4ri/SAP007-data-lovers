@@ -4,7 +4,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
-<<<<<<< HEAD
 
 .menu {
   position: relative;
@@ -36,6 +35,16 @@ body {
   margin-right: auto;
 }
 
+.titulo {
+  justify-content: center;
+  padding: 4% 0 4% 0;
+}
+
+.imagem-cortes{
+  width: 100%;
+  height: 8.5%;
+  padding-bottom: 2%;
+}
 .cortes {
   display: block;
   width: 60%;
