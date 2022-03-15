@@ -5,6 +5,37 @@ body {
   background-attachment: fixed;
 }
 
+
+.menu {
+  position: relative;
+  width: 98%;
+  margin:auto;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu ul{
+  text-align: center;
+}
+
+.navegar {
+  padding:0 5%;
+  text-align: center;
+  font-size: 30px;
+  color:#8BFF5D;
+  font-family: monospace;
+}
+
+.navegar:hover {
+  color: #9BD5E9;
+}
+
+.imagem-rick-and-morty {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .titulo {
   justify-content: center;
   padding: 4% 0 4% 0;
@@ -29,6 +60,26 @@ body {
   color:antiquewhite;
 }
 
+
+.rodape{
+  width: 98%;
+  margin:auto;
+  padding: 0.5%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.rodape p{
+  font-family: Verdana, Tahoma, sans-serif;
+  text-align: center;
+  color:#8BFF5D;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.rodape a:visited{
+  color:#8BFF5D;
+=======
 /*RESPONSIVO PARA TABLETS E CELULARES*/
 @media screen and (min-width: 481px) and (max-width:768px){
 
