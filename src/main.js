@@ -1,4 +1,4 @@
-import { filtroEspecie, filtroGenero, filtroStatus, filtroOrdem, filtroPesquisa, calculaFiltros } from './data.js';
+import { filtroEspecie, filtroGenero, filtroStatus, filtroOrdem, filtroPesquisa, calculaPorcentagem } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 const listaPersonagens = data.results;
@@ -11,7 +11,7 @@ const filtroBusca = document.getElementById("pesquisa");
 const botaoLimpar = document.getElementById("bnt-limpar");
 
 function criarCard (personagem) {
-  const divCard = document.createElement('div')
+  const divCard = document.createElement('ul')
   divCard.classList.add('cards')
   divCard.innerHTML =  `
     <div class="frente-card">
@@ -19,50 +19,40 @@ function criarCard (personagem) {
       <p class="nome-personagem">${personagem.name}</p>
     </div>
     <div class="verso-card">
-      <p><b>Gênero:</b> ${personagem.gender}</p>
-      <p><b>Status:</b> ${personagem.status}</p>
-      <p><b>Espécie:</b> ${personagem.species}</p>
-      <p><b>Origem:</b> ${personagem.origin.name}</p>
-      <p><b>Localização:</b> ${personagem.location.name}</p>
-      <p><b>Aparecem em: </b> ${personagem.episode.length} episódios</p>
+      <ul class="info-verso">
+      <li><b>Gênero:</b> ${personagem.gender}</li>
+      <li><b>Status:</b> ${personagem.status}</li>
+      <li><b>Espécie:</b> ${personagem.species}</li
+      <li><b>Localização:</b> ${personagem.location.name}</li>
+      <li><b>Episódios:</b> ${personagem.episode.map((i) => i.replaceAll(/[^\d$]/g, " "))}</li>
+      </>
     </div>
   `
 
-  function chameiClick() {
+  function mostrarVerso() {
     divCard.classList.toggle('mostra-verso');
   }
 
-  divCard.addEventListener('click', chameiClick)
+  divCard.addEventListener('click', mostrarVerso)
   return divCard
 }
 
-
-
-function mostrarCards(data) { // innerHTML para mostrar os cards na pagina personagens(html)
+function mostrarCards(data) {
   const conteiner = document.getElementById("mostra-cards");
   conteiner.innerHTML = "";
   data.map(personagem => {
     const div = criarCard(personagem)
     conteiner.appendChild(div)
   })
-
 }
 mostrarCards(listaPersonagens);
 
-
-
 function calcularFiltros(listaPersonagens, filtroSelecionado) {
-  calculoFiltros.innerHTML = "",
+  calculoFiltros.innerHTML = "";
   calculoFiltros.style.display = "block";
-  const calculoResultado = calculaFiltros(listaPersonagens, filtroSelecionado);
   calculoFiltros.innerHTML = `Existem ${filtroSelecionado.length} personagens deste filtro, e
-  representam ${calculoResultado}% do total dos personagens`
+  representam ${calculaPorcentagem(listaPersonagens.length, filtroSelecionado.length)}% do total dos personagens`
 }
-
-function limparFiltros() {
-  window.location.reload(); //recarrega a página
-}
-botaoLimpar.addEventListener("click", limparFiltros);
 
 function filtrarEspecie() {
   const valorSelecionadoEspecie = filtroSelecionadoEspecie.value;
@@ -102,20 +92,7 @@ function filtrarPesquisa() {
 }
 filtroBusca.addEventListener("keyup", filtrarPesquisa);
 
-
-
-
-
-
-
-
-
-//O método map() executa uma função em todos os itens de um array e retorna um novo array após a manipulação,
-// ou seja, não sobrescreve o array original.
-// " => " é chamado de arrow function, que é uma função/callback que possui uma sintaxe + curta, comparada com uma função.
-// o "item" foi um parametro criado para puxar os dados do array (array com as informações dos personagens, nome,img etc)
-// essa crase "`" é chamada de template string . Template Strings são strings que permitem expressões embutidas.
-// Pode utilizar string multi-linhas e interpolação de string com elas.
-//O método join() junta todos os elementos de um array em uma string e retorna esta string.
-//o padrão do array é separado por vírgula, se tirar o join, os dados dos personagens serão separados por virgulas.
-//colocamos as aspas ("") pois não queremos que os dados fiquem separados por virgula
+function limparFiltros() {
+  window.location.reload(); //recarrega a página
+}
+botaoLimpar.addEventListener("click", limparFiltros);

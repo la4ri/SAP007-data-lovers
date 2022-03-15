@@ -6,39 +6,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PERSONAGENS - RICK AND MORTY</title>
-  <link rel="stylesheet" href="./style/style_personagens.css" />
+  <link rel="stylesheet" href="./style/style_global.css"/>
+  <link rel="stylesheet" href="./style/style_personagens.css"/>
+  <link rel="icon" href="./img/favicon.ico" />
 </head>
 
 <body>
   <header>
     <nav class="menu">
       <ul>
-        <a class="navegar" href="./index.html">Ínicio</a>
-        <a class="navegar" href="./personagens.html">Personagens</a>
-        <a class="navegar" href="./curiosidades.html">Curiosidades</a>
-        <a class="navegar" href="./cortes.html">Cortes</a>
+        <li><a class="navegar" href="./index.html">Ínicio</a></li>
+        <li><a class="navegar" href="./personagens.html">Personagens</a></li>
+        <li><a class="navegar" href="./curiosidades.html">Curiosidades</a></li>
+        <li><a class="navegar" href="./cortes.html">Cortes</a></li>
       </ul>
     </nav>
-    <img class="imagem-rick-and-morty" src="./style/images/logo.jpg" alt="logo-rick-and-morty">
+    <img class="logo-rick-and-morty" src="./style/images/logo.jpg" alt="logo-rick-and-morty">
   </header>
 
-  <section class="menu-busca">
-
+  <section class="menu-filtros">
     <div class="menu-esquerda">
-      <select class="filtro campo-filtro" id="filtro-genero">
+      <select class="filtro" id="filtro-genero">
         <option disabled selected value>Gênero</option>
         <option value="male">Masculino</option>
         <option value="female">Feminino</option>
         <option value="genderless">Sem gênero</option>
         <option value="unknown">Desconhecido</option>
       </select>
-      <select class="filtro campo-filtro" id="filtro-status">
+      <select class="filtro" id="filtro-status">
         <option disabled selected value>Status</option>
         <option value="alive">Vivo</option>
         <option value="dead">Morto</option>
         <option value="unknown">Desconhecido</option>
       </select>
-      <select class="filtro campo-filtro" id="filtro-especies">
+      <select class="filtro" id="filtro-especies">
         <option disabled selected value>Espécie</option>
         <option value="human">Humano</option>
         <option value="alien">Alien</option>
@@ -53,25 +54,28 @@
         <option value="disease">Disease</option>
         <option value="parasite">Parasita</option>
       </select>
-      <select class="filtro campo-filtro" id="filtro-ordem">
+      <select class="filtro" id="filtro-ordem">
         <option disabled selected>Ordem</option>
         <option value="az">&#8595 A-Z</option>
         <option value="za">&#8593 Z-A</option>
       </select>
     </div>
-    <div class="menu-pesquisa">
-      <input class="pesquisa campo-de-pesquisa" id="pesquisa" type="search" placeholder="🔎︎ Encontre seu personagem"
+    <div class="menu-direita">
+      <input class="campo-pesquisa" id="pesquisa" type="search" placeholder="🔎︎ Personagem"
         value="">
-      <button type="reset" id="bnt-limpar" class="bnt-limpar campo-filtro">Limpar</button>
+      <button type="reset" id="bnt-limpar" class="btn-limpar">Limpar</button>
     </div>
   </section>
   <p class="calculo-filtro" id="calculo-filtro"></p> <!-- % dos personagens-->
   <div class="mostra-cards" id="mostra-cards"></div><!-- Os cards são mostrados nessa div-->
+  <button class="botao-topo" id="botao-topo"><img src="./img/botao-topo.png" alt="botoao-topo"></button>
   <footer class="rodape">
-    <p>Desenvolvido por <a href="https://github.com/flavia-dantas" target="_blank">Flavia Almeida</a> e <a
+    <p class="texto-rodape">Desenvolvido por <a href="https://github.com/flavia-dantas" target="_blank">Flavia Almeida</a> e <a
         href="https://github.com/la4ri" target="_blank">Larissa Moreira</a>
     </p>
   </footer>
   <script src="main.js" type="module"></script>
+  <script src="scrollTo.js" type="module"></script>
 </body>
+
 </html>
