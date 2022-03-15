@@ -2,6 +2,7 @@
 import { describe, it } from 'eslint/lib/rule-tester/rule-tester';
 import { filtroGenero, filtroStatus, filtroOrdem, filtroEspecie, filtroPesquisa, calculaPorcentagem} from '../src/data.js';
 
+
 const personagens = [
   {
     "name": "Beth Smith",
