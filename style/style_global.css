@@ -22,10 +22,13 @@
   margin:auto;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
+
 }
 
-.menu ul{
+.menu ul li{
   text-align: center;
+  list-style-type: none;
+  display: inline;
 }
 
 .navegar {
@@ -42,7 +45,9 @@
 
 /* LOGO RICK AND MORTY*/
 .logo-rick-and-morty {
-  display: block;
+  display: flex;
+  width: 45%;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
 }
@@ -65,4 +70,18 @@
 
 .texto-rodape a:visited{
   color:#8BFF5D;
+}
+
+/*RESPONSIVO PARA TABLETS E CELULARES*/
+@media screen and (min-width: 481px) and (max-width:768px){
+  .logo-rick-and-morty {
+    width: 75%;
+  }
+}
+
+/*RESPONSIVO PARA CELULARES*/
+@media screen and (max-width: 480px){
+  .logo-rick-and-morty {
+    width: 75%;
+  }
 }

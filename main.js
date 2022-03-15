@@ -1,4 +1,4 @@
-import { filtroEspecie, filtroGenero, filtroStatus, filtroOrdem, filtroPesquisa, calculaFiltros } from './data.js';
+import { filtroEspecie, filtroGenero, filtroStatus, filtroOrdem, filtroPesquisa, calculaPorcentagem } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 const listaPersonagens = data.results;
@@ -48,11 +48,10 @@ function mostrarCards(data) {
 mostrarCards(listaPersonagens);
 
 function calcularFiltros(listaPersonagens, filtroSelecionado) {
-  calculoFiltros.innerHTML = "",
+  calculoFiltros.innerHTML = "";
   calculoFiltros.style.display = "block";
-  const calculoResultado = calculaFiltros(listaPersonagens, filtroSelecionado);
   calculoFiltros.innerHTML = `Existem ${filtroSelecionado.length} personagens deste filtro, e
-  representam ${calculoResultado}% do total dos personagens`
+  representam ${calculaPorcentagem(listaPersonagens.length, filtroSelecionado.length)}% do total dos personagens`
 }
 
 function filtrarEspecie() {

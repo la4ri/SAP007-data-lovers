@@ -23,11 +23,11 @@ export const filtroOrdem = (listaPersonagens, ordem) => {
 };
 
 export const filtroPesquisa = (listaPersonagens, acharValor) => {
-  const resultadoPesquisa = listaPersonagens.filter(personagem => personagem.name.toLowerCase().includes(acharValor.toLowerCase()));
+  const resultadoPesquisa = listaPersonagens.filter((personagem) => personagem.name.toLowerCase().includes(acharValor.toLowerCase()));
   return resultadoPesquisa;
 };
 
-export const calculaFiltros = (listaPersonagens, filtroSelecionado) => {
-  const resultadoCalculo = parseFloat((filtroSelecionado.length * 100) / listaPersonagens.length).toFixed(2);
-  return resultadoCalculo;
+export const calculaPorcentagem = (total, selecionado) => {
+  const percentage = Math.round((selecionado * 100) / total);
+  return percentage;
 };
