@@ -4,7 +4,7 @@
 
 - [1. Introdução](#1-Introdução)
 - [2. Resumo do projeto](#2-resumo-do-projeto)
-- [3. Definição de produto](#3-definição de-produto)
+- [3. Definição de produto](#3-definição-de-produto)
 - [4. Testes unitários](#4-testes-unitários)
 - [5. Resultado](#5-Resultado)
 
@@ -15,6 +15,8 @@
 [Rick and Morty](https://pt.wikipedia.org/wiki/Rick_and_Morty) é uma série animada de  comédia e ficção científica que mostra as aventuras interdimensionais, estreou em dezembro de 2013.  A história apresenta as aventuras de Rick Sanchez, um cientista extremamente inteligente e alcoólatra de 60 anos, com seu neto Morty Smith, que possui dificuldades escolares e tem 14 anos
 
 Inspirado em “De Volta Para o Futuro”, o desenho mistura elementos do mundo “real” com as viagens da dupla protagonista por outras dimensões e universos paralelos.
+
+Para visualizar o projeto [clique aqui](https://flavia-dantas.github.io/SAP007-data-lovers/)
 
 ## 2. Resumo do projeto
 
@@ -30,7 +32,11 @@ O site foi desenvolvido para atender os fãs da série Rick and Morty de forma p
 
 Para atender os usuários, foi realizado uma pesquisa foi utilizado **Google Forms** com o objetivo de entender os fãs e curiosos da série, identificando a faixa etária e gênero dos usuários, e quais são os seus interesses em relação aos personagens e o tipo de informação que consideram relevantes na série. Abaixo é possível visualizar os três perfis definidos para o projeto.
 
+![](./src/img-readme/historia-usuario1.jpg)
 
+![](./src/img-readme/historia-usuario2.jpg)
+
+![](./src/img-readme/historia-usuario3.jpg)
 
 ### Desenho de interface do usuário
 
@@ -38,21 +44,25 @@ Para atender os usuários, foi realizado uma pesquisa foi utilizado **Google For
 
 Após a definição das histórias de usuário, foi criado um protótipo de baixa fidelidade, conforme abaixo.
 
-
-
+![](./src/img-readme/prototipo-baixa-fidelidade.jpg)
 
 
 #### Protótipo de alta fidelidade
 
 O próximo passo foi desenhar uma Interface de Usuário (UI - *User Interface*). Para isso, foi utilizado a ferramenta **Figma** .
 
+Tela inicial:
 
+![](./src/img-readme/prototipo-alta-fidelidade-inicio.png)
+
+Pagina Personagens:
+![](./src/img-readme/prototipo-alta-fidelidade.png)
 
 #### **Paleta de cores**
 
 A paleta de cores foram definidas através das cores principais da série
 
-
+![](./src/img-readme/paleta-cores.png)
 
 #### Testes de usabilidade
 
@@ -81,5 +91,17 @@ Os testes unitários foram desenvolvidos para testar as funções encarregadas d
 _filtrar_ e _ordenar_ os dados, assim como _o calculo agregado_. Os testes cobrem 100% de _statements_
 (_sentenças_), _functions_ (_funções_), _lines_ (_linhas_), e _branches_ (_ramos_).
 
+![](./src/img-readme/testes-unitarios.png)
+
 ## 5. Resultado
+
+Versão para desktop / notebook:
+![](./src/img-readme/responsivo-laptop.png)
+
+Versão responsiva para Tablet:
+![](./src/img-readme/responsivo-tablet.png)
+
+Versão responsiva para celular:
+![](./src/img-readme/responsivo-mobile.png)
+
 
