@@ -77,11 +77,30 @@
   .logo-rick-and-morty {
     width: 75%;
   }
+  .navegar {
+    padding: 0 3.5%;
+    text-align: center;
+    font-size: 30px;
+    color: #8BFF5D;
+    font-family: monospace;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
 }
 
 /*RESPONSIVO PARA CELULARES*/
 @media screen and (max-width: 480px){
   .logo-rick-and-morty {
     width: 75%;
+  }
+
+  .navegar {
+    padding: 0 2.5%;
+    text-align: center;
+    font-size: 30px;
+    color: #8BFF5D;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: bold;
   }
 }

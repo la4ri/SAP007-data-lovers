@@ -8,12 +8,18 @@ body {
 .titulo {
   justify-content: center;
   padding: 4% 0 4% 0;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .imagem-cortes{
-  width: 100%;
-  height: 8.5%;
+  width: 90%;
+  /* height: 8.5%; */
   padding-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
 }
 
 .cortes {
@@ -25,8 +31,31 @@ body {
   padding: 2%;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
+  /* text-align: justify;
+  color:#ffffff; */
+}
+.cortes a:visited{
+  color:#ffffff;
+}
+
+.video{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.container-conteudo{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
   text-align: justify;
-  color:antiquewhite;
+}
+
+.container-imagem{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*RESPONSIVO PARA TABLETS E CELULARES*/
@@ -44,6 +73,30 @@ body {
     text-align: justify;
     color:antiquewhite;
   }
+  .imagem-cortes{
+    width: 80%;
+    height: 8.5%;
+    padding-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
+  .video{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
+  .imagem-cortes{
+    width: 80%;
+    height: 8.5%;
+    padding-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
 }
 
 /*RESPONSIVO PARA CELULARES*/
@@ -59,5 +112,12 @@ body {
     border-radius: 10px;
     text-align: justify;
     color:antiquewhite;
+  }
+
+  .video{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
   }
 }
