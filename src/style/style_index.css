@@ -1,28 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
 body {
-  background: url(./images/background.jpg);
+  background: url(./images/bg-portal.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
  }
 
-.portal {
-  width: 27%;
-  left: 37%;
-  right: 35%;
-  top: 37%;
-  mix-blend-mode: normal;
-  position: fixed;
-}
-
-.botao-portal {
+.botao-portal{
   position: fixed;
   left: 47%;
-  top: 65%;
+  top: 70%;
   background: #02883A;
   border-radius: 10px;
-  font-family: monospace;
+  /* font-family: monospace; */
+  font-family:'Amatic SC', cursive;
+  font-size: 0.8rem;
   text-align: center;
   text-decoration: none;
+  padding: 0.5%;
+  border: none;
 }
 
 .botao-portal:hover{
@@ -32,4 +34,70 @@ body {
 
 .botao-portal:visited{
   color: #ffffff;
+}
+
+/*RESPONSIVO PARA TABLETS E CELULARES*/
+@media screen and (min-width: 481px) and (max-width:768px){
+  body {
+    background: url(./images/portal-tablet.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .botao-portal{
+    position: fixed;
+    left: 47%;
+    top: 70%;
+    background: #02883A;
+    border-radius: 10px;
+    /* font-family: monospace; */
+    font-family:'Amatic SC', cursive;
+    font-size: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5%;
+    border: none;
+  }
+
+  .botao-portal:hover{
+    background-color:#8BFF5D;
+    color: #ffffff;
+  }
+
+  .botao-portal:visited{
+    color: #ffffff;
+  }
+}
+
+/*RESPONSIVO PARA CELULARES*/
+@media screen and (max-width: 480px){
+  body {
+    background: url(./images/portal-celular.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   }
+   .botao-portal{
+    position: fixed;
+    left: 38%;
+    top: 65%;
+    background: #02883A;
+    border-radius: 10px;
+    /* font-family: monospace; */
+    font-family:'Amatic SC', cursive;
+    font-size: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5%;
+    border: none;
+  }
+
+  .botao-portal:hover{
+    background-color:#8BFF5D;
+    color: #ffffff;
+  }
+
+  .botao-portal:visited{
+    color: #ffffff;
+  }
 }

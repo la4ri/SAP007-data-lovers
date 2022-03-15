@@ -1,6 +1,6 @@
 
 import { describe, it } from 'eslint/lib/rule-tester/rule-tester';
-import { filtroGenero, filtroStatus, filtroOrdem } from '../src/data.js';
+import { filtroGenero, filtroStatus, filtroOrdem, filtroEspecie, filtroPesquisa, calculaPorcentagem} from '../src/data.js';
 
 const personagens = [
   {
@@ -85,5 +85,37 @@ describe('filtroOrdem', () => {
   it('retorna os personagens ordenados de "Z-A", quando selecionado "Z-A"', () => {
     const personagensFiltrados = filtroOrdem(nomesPersonagens, "za")
     expect(personagensFiltrados).toEqual(nomesOrdemZA)
+  });
+})
+
+describe('filtroEspecie', () => {
+  it('função do filtro espécie', ()=> {
+    expect(typeof filtroEspecie).toBe('function');
+  });
+  it('retorna os somente os personagens "Alien", quando selecionado "Alien"', ()=> {
+    const resultadoEsperado = [{"name": "Steven Phillips", "status": "Alive","species": "Alien", "gender": "Male"}]
+    const personagensFiltrados = filtroEspecie(personagens, 'Alien')
+    expect(personagensFiltrados).toEqual(resultadoEsperado)
+  })
+})
+
+describe('filtroPesquisa', () => {
+  it('função do filtro do campo pesquisa',() => {
+    expect(typeof filtroPesquisa).toBe('function');
+  });
+  it('retorna somente os personagens que contém "Beth", quando digitado a palavra "Beth"',() => {
+    const resultadoEsperado = [{"name": "Beth Smith"}]
+    const personagensFiltrados = filtroPesquisa(nomesPersonagens, 'Beth')
+    expect(personagensFiltrados).toEqual(resultadoEsperado)
+  });
+})
+
+describe('calculaPorcentagem', () => {
+  it('função do calculo de porcentagem dos personagens',() => {
+    expect(typeof calculaPorcentagem).toBe('function');
+  });
+  it('retorna somente a porcentagem de personagens "Male", quando selecionado "Male"',() => {
+    const resultadoEsperado = calculaPorcentagem(personagens.length, 2)
+    expect(resultadoEsperado).toEqual(50)
   });
 })

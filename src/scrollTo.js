@@ -1,5 +1,3 @@
-// FUNÇÃO VOLTAR PARA O TOPO DA PAGINA
-
 const botaoTopo = document.getElementById("botao-topo");
 
 function topoPagina(){
