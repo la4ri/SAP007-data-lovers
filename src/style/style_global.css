@@ -34,7 +34,7 @@
 .navegar {
   padding:0 5%;
   text-align: center;
-  font-size: 30px;
+  font-size: 1.8rem;
   color:#8BFF5D;
   font-family: monospace;
 }
@@ -77,11 +77,26 @@
   .logo-rick-and-morty {
     width: 75%;
   }
+  .navegar {
+    padding:0 5%;
+    text-align: center;
+    font-size: 1.4rem;
+    color:#8BFF5D;
+    font-family: monospace;
+  }
 }
 
 /*RESPONSIVO PARA CELULARES*/
 @media screen and (max-width: 480px){
   .logo-rick-and-morty {
     width: 75%;
+  }
+  .navegar {
+    padding:0 2.5%;
+    text-align: center;
+    font-size: 1rem;
+    color:#8BFF5D;
+    font-family: monospace;
+    font-weight: bold;
   }
 }

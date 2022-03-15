@@ -18,8 +18,6 @@ body {
   top: 70%;
   background: #02883A;
   border-radius: 10px;
-  /* font-family: monospace; */
-  font-family:'Amatic SC', cursive;
   font-size: 0.8rem;
   text-align: center;
   text-decoration: none;
@@ -50,8 +48,6 @@ body {
     top: 70%;
     background: #02883A;
     border-radius: 10px;
-    /* font-family: monospace; */
-    font-family:'Amatic SC', cursive;
     font-size: 0.8rem;
     text-align: center;
     text-decoration: none;
