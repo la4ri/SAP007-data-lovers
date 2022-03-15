@@ -35,6 +35,60 @@ body {
 
 .imagens-curiosidades{
   width: 100%;
-  height: 8.5%;
+  height: auto;
   padding-bottom: 2%;
+}
+
+/*RESPONSIVO PARA TABLETS E CELULARES*/
+@media screen and (min-width: 481px) and (max-width:768px){
+  .curiosidades, .fontes {
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4%;
+    padding: 2%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+.imagens-curiosidades {
+  width: 100%;
+  height: auto;
+  padding-bottom: 2%;
+}
+.texto-curiosidades, .fontes p, a {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+}
+
+/*RESPONSIVO PARA CELULARES*/
+@media screen and (max-width: 480px){
+  .curiosidades, .fontes {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4%;
+    padding: 2%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+.imagens-curiosidades {
+  width: 100%;
+  height: auto;
+  padding-bottom: 2%;
+}
+.texto-curiosidades, .fontes p, a {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+    text-align: justify;
+    font-size: 0.9rem;
+}
 }

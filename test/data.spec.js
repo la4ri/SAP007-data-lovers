@@ -1,6 +1,7 @@
 
 import { describe, it } from 'eslint/lib/rule-tester/rule-tester';
-import { filtroGenero, filtroStatus, filtroOrdem, filtroEspecie, filtroPesquisa } from '../src/data.js';
+import { filtroGenero, filtroStatus, filtroOrdem, filtroEspecie, filtroPesquisa, calculaPorcentagem} from '../src/data.js';
+
 
 const personagens = [
   {
@@ -99,9 +100,23 @@ describe('filtroEspecie', () => {
   })
 })
 
-describe('filtroNomeSelecionado', ()=> {
-  it('função do filtro pesquisa', ()=> {
+describe('filtroPesquisa', () => {
+  it('função do filtro do campo pesquisa',() => {
     expect(typeof filtroPesquisa).toBe('function');
   });
-  it('retorna os personagens ')
+  it('retorna somente os personagens que contém "Beth", quando digitado a palavra "Beth"',() => {
+    const resultadoEsperado = [{"name": "Beth Smith"}]
+    const personagensFiltrados = filtroPesquisa(nomesPersonagens, 'Beth')
+    expect(personagensFiltrados).toEqual(resultadoEsperado)
+  });
+})
+
+describe('calculaPorcentagem', () => {
+  it('função do calculo de porcentagem dos personagens',() => {
+    expect(typeof calculaPorcentagem).toBe('function');
+  });
+  it('retorna somente a porcentagem de personagens "Male", quando selecionado "Male"',() => {
+    const resultadoEsperado = calculaPorcentagem(personagens.length, 2)
+    expect(resultadoEsperado).toEqual(50)
+  });
 })
