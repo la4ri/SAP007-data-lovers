@@ -1,9 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 body {
   background-image: url(../style/images/background-2.jpg);
   background-repeat: no-repeat;
@@ -11,35 +5,8 @@ body {
   background-attachment: fixed;
 }
 
-.menu {
-  position: relative;
-  width: 98%;
-  margin:auto;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.menu ul{
-  text-align: center;
-}
-.navegar {
-  padding:0 5%;
-  text-align: center;
-  font-size: 30px;
-  color:#8BFF5D;
-  font-family: monospace;
-}
-
-.navegar:hover {
-  color: #9BD5E9;
-}
-
-.imagem-rick-and-morty {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.menu-busca {
+/* MENU FILTROS */
+.menu-filtros {
   width: 98%;
   margin: auto;
   display: flex;
@@ -61,18 +28,15 @@ body {
   margin-right: 4%;
 }
 
-.pesquisa {
+.campo-pesquisa {
+  display: inline-flex;
   width: 18vw;
   height: 6vh;
   margin: 1%;
   padding: 1%;
   border-radius: 0.5em;
-  display: inline-flex;
-  font-family: Verdana, Tahoma, sans-serif;
-}
-
-.pesquisa:hover {
-  background-color: #8BFF5D;
+  border:#9BD5E9 solid 3px;
+  background-color: #B8E4F3;
 }
 
 .filtro, .bnt-limpar{
@@ -84,26 +48,29 @@ body {
   display: inline-block;
   font-weight: bold;
   border:#9BD5E9 solid 3px;
-  font-family: Verdana, Tahoma, sans-serif;
   text-align: center;
+  cursor: pointer;
 }
 
-.bnt-limpar:hover {
-  background-color: #56C32A;
-  border:#8BFF5D solid 3px;
-}
-.filtro:hover {
-  background-color: #56C32A;
-  border:#8BFF5D solid 3px;
+.bnt-limpar:hover, .bnt-limpar:focus, .filtro:hover, .filtro:focus {
+  background-color: #8BFF5D;
+  border:#02883A solid 3px;
+  box-shadow: 0px 0px 10px #8BFF5D, 0px 0px 20px #56C32A, 0px 0px 30px #8BFF5D;
 }
 
-.calculo-filtro{
+.campo-pesquisa:focus, .campo-pesquisa:hover {
+  box-shadow: 0px 0px 10px #8BFF5D, 0px 0px 20px #56C32A, 0px 0px 30px #8BFF5D;
+  background-color: #b5f79b;
+  border:#02883A solid 3px;
+}
+
+/* CALCULO AGREGADO */
+.calculo-filtro {
   width: 60%;
   display: none;
   background-color: #22A2BD;
   border-radius: 0.5em ;
   border:#9BD5E9 solid 3px;
-  font-family: Verdana, Tahoma, sans-serif;
   text-align: center;
   font-weight: bold;
   padding: 0.2%;
@@ -113,30 +80,54 @@ body {
 }
 
 /* CARDS */
+.mostra-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .cards {
-  font-family: Verdana, Tahoma, sans-serif;
-  display: inline-flex;
   padding: 1%;
 }
 
-/* FRENTE E VERSO CARDS */
 .frente-card, .verso-card {
   width: 16vw;
   height: 45vh;
-  padding-top: 2%;
+  padding-top: 0.5%;
   background-color: #22A2BD;
   border-radius: 1em;
   text-align: center;
   border:#9BD5E9 solid 3px;
 }
-
-.frente-card:hover{
-  border: #8BFF5D solid 3px;
-  background-color: #56C32A;
+.info-verso{
+  padding: 3%;
+  font-size: 14px;
+  list-style-type: none;
 }
-.frente-card .nome-personagem {
-  width: 90%;
-  height: 22%;
+
+ .cards .verso-card, .cards.mostra-verso .frente-card {
+  display: none;
+}
+
+.cards .frente-card, .cards.mostra-verso .verso-card {
+  display: block;
+}
+
+.frente-card:hover, .verso-card {
+  box-shadow: 0px 0px 10px #02883A, 0px 0px 20px #56C32A, 0px 0px 30px #02883A;
+}
+
+.img-card {
+  width: 13vw;
+  border: solid 5px #56C32A;
+  border-radius: 2em;
+  margin-top: 2%;
+  text-align: center;
+}
+
+.nome-personagem {
+  width: 80%;
+  height: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,54 +138,4 @@ body {
   border:#9BD5E9 solid 2px;
   border-radius: 8px;
   font-weight: bold;
-}
-
-.cards .verso-card {
-  display: none;
-}
-
-.cards .frente-card {
-  display: block;
-}
-
-.cards.mostra-verso .frente-card {
-  display: none;
-}
-
-.cards.mostra-verso .verso-card {
-  display: block;
-}
-
-/* IMAGEM DOS CARDS */
-.img-card {
-  width: 13vw;
-  border: solid 5px #56C32A;
-  border-radius: 2em;
-  margin-top: 2%;
-  text-align: center;
-}
-
-.img-card:hover {
-  border:#22A2BD solid 5px;
-}
-
-/* RODAPÉ */
-.rodape{
-  width: 98%;
-  margin:auto;
-  padding: 0.5%;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.rodape p{
-  font-family: Verdana, Tahoma, sans-serif;
-  text-align: center;
-  color:#8BFF5D;
-  font-size: 1em;
-  font-weight: bold;
-}
-
-.rodape a:visited{
-  color:#8BFF5D;
 }

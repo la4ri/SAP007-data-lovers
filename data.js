@@ -14,10 +14,11 @@ export const filtroStatus = (listaPersonagens, status) => {
 };
 
 export const filtroOrdem = (listaPersonagens, ordem) => {
+  const copiaListaPersonagens = [...listaPersonagens] // "..." Spread - este operador é usado para ‘espalhar’ os elementos de um array
   if (ordem === "az") {
-    return listaPersonagens.sort((a, b) => a.name > b.name ? 1 : -1)
+    return copiaListaPersonagens.sort((a, b) => a.name > b.name ? 1 : -1)
   } else {
-    return listaPersonagens.sort((a, b) => a.name > b.name ? -1 : 1)
+    return copiaListaPersonagens.sort((a, b) => a.name > b.name ? -1 : 1)
   }
 };
 
@@ -26,14 +27,7 @@ export const filtroPesquisa = (listaPersonagens, acharValor) => {
   return resultadoPesquisa;
 };
 
-export const calculaFiltros = (listaPersonagens,filtroSelecionado)=>{
+export const calculaFiltros = (listaPersonagens, filtroSelecionado) => {
   const resultadoCalculo = parseFloat((filtroSelecionado.length * 100) / listaPersonagens.length).toFixed(2);
   return resultadoCalculo;
 };
-
-// toLowerCase() retorna o valor da string que foi chamada convertido para minúsculo
-// Ex: A especie, gernero e status a primeira letra é maiuscula
-// O método sort() ordena os elementos do próprio array e retorna o array.
-// operador ternário - funciona com o mesmo conceito do if e else
-// A sintaxe é: {condição} ? {expressão se verdadeiro} : {expressão se falso} s
-// condição ? a : b
