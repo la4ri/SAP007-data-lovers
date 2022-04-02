@@ -105,7 +105,8 @@ body {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
 }
 
 .frente-card, .verso-card {
@@ -114,8 +115,18 @@ body {
   padding-top: 0.5%;
   background-color: #22A2BD;
   border-radius: 1em;
-  text-align: center;
   border:#9BD5E9 solid 3px;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.verso-card {
+  transform: rotateY(180deg);
+}
+
+.mostra-verso {
+  transform: rotateY(180deg);
 }
 
 .info-verso{
@@ -147,13 +158,13 @@ body {
   font-weight: bold;
 }
 
- .cards .verso-card, .cards.mostra-verso .frente-card {
+ /*.cards .verso-card, .cards.mostra-verso .frente-card {
   display: none;
 }
 
 .cards .frente-card, .cards.mostra-verso .verso-card {
   display: block;
-}
+}*/
 
 .frente-card:hover, .verso-card {
   box-shadow: 0px 0px 10px #02883A, 0px 0px 20px #56C32A, 0px 0px 30px #02883A;
