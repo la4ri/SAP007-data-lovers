@@ -5,7 +5,6 @@ body {
   background-attachment: fixed;
 }
 
-/* CURIOSIDADES */
 .titulo{
   padding: 4% 0 4% 0;
 }
@@ -51,19 +50,19 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
 }
-.imagens-curiosidades {
-  width: 100%;
-  height: auto;
-  padding-bottom: 2%;
-}
-.texto-curiosidades, .fontes p, a {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    color: #ffffff;
-    text-align: justify;
-    font-size: 0.9rem;
-}
+  .imagens-curiosidades {
+    width: 100%;
+    height: auto;
+    padding-bottom: 2%;
+  }
+  .texto-curiosidades, .fontes p, a {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      color: #ffffff;
+      text-align: justify;
+      font-size: 0.9rem;
+  }
 }
 
 /*RESPONSIVO PARA CELULARES*/
@@ -78,17 +77,17 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
 }
-.imagens-curiosidades {
-  width: 100%;
-  height: auto;
-  padding-bottom: 2%;
-}
-.texto-curiosidades, .fontes p, a {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    color: #ffffff;
-    text-align: justify;
-    font-size: 0.9rem;
-}
+  .imagens-curiosidades {
+    width: 100%;
+    height: auto;
+    padding-bottom: 2%;
+  }
+  .texto-curiosidades, .fontes p, a {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      color: #ffffff;
+      text-align: justify;
+      font-size: 0.9rem;
+  }
 }
